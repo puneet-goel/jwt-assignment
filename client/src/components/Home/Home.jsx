@@ -15,24 +15,26 @@ const Home = () => {
     }
 
     return(
-        <div className="container-fluid min-vh-100 min-vw-100 p-0" style={{backgroundColor: 'white'}} >
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <div className="container-fluid">
-                    <ul className="navbar-nav">
-                        <li className="nav-item">
-                            <a className={`nav-link ${tab===1?'active':''}`} aria-current="page" href="/" onClick={handleTab1}>Add Users</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className={`nav-link ${tab===2?'active':''}`}  aria-current="page" href="/" onClick={handleTab2}>View/Delete Users</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            {
-                tab===1?
-                <AddUser />
-                :<View />
-            }
+        <div>
+            <div className="container-fluid min-vh-100 min-vw-100 p-0" style={{backgroundColor: 'white'}} >
+                <nav className="navbar navbar-expand navbar-dark bg-primary">
+                    <div className="container-fluid">
+                        <ul className="navbar-nav d-flex justify-content-between w-100">
+                            <li className="nav-item">
+                                <a className={`nav-link fs-5 fw-bold text-center ${tab===1?'active':''}`} aria-current="page" href="/" onClick={handleTab1}>Add Users</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className={`nav-link fs-5 fw-bold text-center ${tab===2?'active':''}`}  aria-current="page" href="/" onClick={handleTab2}>View/Delete Users</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                {
+                    tab===1?
+                    <AddUser />
+                    :<View />
+                }
+            </div>
         </div>
     )
 }

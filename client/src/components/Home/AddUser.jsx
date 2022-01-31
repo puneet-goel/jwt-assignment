@@ -18,7 +18,7 @@ const schema = Yup.object().shape({
 const AddUser = () => {
 
     return(
-        <div className="container-fluid pt-3" >
+        <div className="container-fluid py-3" >
             <div className="row justify-content-center">
                 <div className="col-8 col-sm-6 col-md-4 bg-white p-3 border border-3 border-dark">
                     <h3 className="text-center pt-2 font-weight-bold">Add User</h3>
